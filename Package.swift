@@ -125,6 +125,12 @@ let package = Package(
             name: "DynamoDBModel",
             dependencies: ["LoggerAPI"]),
         .target(
+            name: "IotDataClient",
+            dependencies: ["IotDataModel", "SmokeAWSHttp"]),
+        .target(
+            name: "IotDataModel",
+            dependencies: ["LoggerAPI"]),
+        .target(
             name: "ElasticComputeCloudClient",
             dependencies: ["ElasticComputeCloudModel", "SmokeAWSHttp"]),
         .target(

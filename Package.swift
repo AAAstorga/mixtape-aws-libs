@@ -97,6 +97,12 @@ let package = Package(
         .library(
             name: "SmokeAWSHttp",
             targets: ["SmokeAWSHttp"]),
+        .library(
+            name: "IotDataClient",
+            targets: ["IotDataClient"]),
+        .library(
+            name: "IotDataModel",
+            targets: ["IotDataModel"]),
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-nio.git", from: "1.8.0"),

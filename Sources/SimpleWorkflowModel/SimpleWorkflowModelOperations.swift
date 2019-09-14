@@ -41,7 +41,6 @@ public enum SimpleWorkflowModelOperations: String {
     case listClosedWorkflowExecutions = "ListClosedWorkflowExecutions"
     case listDomains = "ListDomains"
     case listOpenWorkflowExecutions = "ListOpenWorkflowExecutions"
-    case listTagsForResource = "ListTagsForResource"
     case listWorkflowTypes = "ListWorkflowTypes"
     case pollForActivityTask = "PollForActivityTask"
     case pollForDecisionTask = "PollForDecisionTask"
@@ -56,12 +55,7 @@ public enum SimpleWorkflowModelOperations: String {
     case respondDecisionTaskCompleted = "RespondDecisionTaskCompleted"
     case signalWorkflowExecution = "SignalWorkflowExecution"
     case startWorkflowExecution = "StartWorkflowExecution"
-    case tagResource = "TagResource"
     case terminateWorkflowExecution = "TerminateWorkflowExecution"
-    case undeprecateActivityType = "UndeprecateActivityType"
-    case undeprecateDomain = "UndeprecateDomain"
-    case undeprecateWorkflowType = "UndeprecateWorkflowType"
-    case untagResource = "UntagResource"
 
     public var operationPath: String {
         switch self {
@@ -97,8 +91,6 @@ public enum SimpleWorkflowModelOperations: String {
             return "/"
         case .listOpenWorkflowExecutions:
             return "/"
-        case .listTagsForResource:
-            return "/"
         case .listWorkflowTypes:
             return "/"
         case .pollForActivityTask:
@@ -127,17 +119,7 @@ public enum SimpleWorkflowModelOperations: String {
             return "/"
         case .startWorkflowExecution:
             return "/"
-        case .tagResource:
-            return "/"
         case .terminateWorkflowExecution:
-            return "/"
-        case .undeprecateActivityType:
-            return "/"
-        case .undeprecateDomain:
-            return "/"
-        case .undeprecateWorkflowType:
-            return "/"
-        case .untagResource:
             return "/"
         }
     }

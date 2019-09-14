@@ -135,7 +135,6 @@ public extension Cluster {
             pendingTasksCount: nil,
             registeredContainerInstancesCount: nil,
             runningTasksCount: nil,
-            settings: nil,
             statistics: nil,
             status: nil,
             tags: nil)
@@ -188,19 +187,6 @@ public extension ClusterNotFoundException {
     }()
 }
 
-public extension ClusterSetting {
-    /**
-     Default instance of the ClusterSetting structure.
-     */
-    public static let __default: ElasticContainerModel.ClusterSetting = {
-        let defaultInstance = ElasticContainerModel.ClusterSetting(
-            name: nil,
-            value: nil)
-
-        return defaultInstance
-    }()
-}
-
 public extension Container {
     /**
      Default instance of the Container structure.
@@ -210,7 +196,6 @@ public extension Container {
             containerArn: nil,
             cpu: nil,
             exitCode: nil,
-            firelensConfiguration: nil,
             gpuIds: nil,
             healthStatus: nil,
             lastStatus: nil,
@@ -220,7 +205,6 @@ public extension Container {
             networkBindings: nil,
             networkInterfaces: nil,
             reason: nil,
-            runtimeId: nil,
             taskArn: nil)
 
         return defaultInstance
@@ -245,7 +229,6 @@ public extension ContainerDefinition {
             environment: nil,
             essential: nil,
             extraHosts: nil,
-            firelensConfiguration: nil,
             healthCheck: nil,
             hostname: nil,
             image: nil,
@@ -307,7 +290,6 @@ public extension ContainerInstance {
             remainingResources: nil,
             runningTasksCount: nil,
             status: nil,
-            statusReason: nil,
             tags: nil,
             version: nil,
             versionInfo: nil)
@@ -344,7 +326,6 @@ public extension ContainerStateChange {
             exitCode: nil,
             networkBindings: nil,
             reason: nil,
-            runtimeId: nil,
             status: nil)
 
         return defaultInstance
@@ -358,7 +339,6 @@ public extension CreateClusterRequest {
     public static let __default: ElasticContainerModel.CreateClusterRequest = {
         let defaultInstance = ElasticContainerModel.CreateClusterRequest(
             clusterName: nil,
-            settings: nil,
             tags: nil)
 
         return defaultInstance
@@ -907,19 +887,6 @@ public extension Failure {
     }()
 }
 
-public extension FirelensConfiguration {
-    /**
-     Default instance of the FirelensConfiguration structure.
-     */
-    public static let __default: ElasticContainerModel.FirelensConfiguration = {
-        let defaultInstance = ElasticContainerModel.FirelensConfiguration(
-            options: nil,
-            type: .__default)
-
-        return defaultInstance
-    }()
-}
-
 public extension HealthCheck {
     /**
      Default instance of the HealthCheck structure.
@@ -956,32 +923,6 @@ public extension HostVolumeProperties {
     public static let __default: ElasticContainerModel.HostVolumeProperties = {
         let defaultInstance = ElasticContainerModel.HostVolumeProperties(
             sourcePath: nil)
-
-        return defaultInstance
-    }()
-}
-
-public extension InferenceAccelerator {
-    /**
-     Default instance of the InferenceAccelerator structure.
-     */
-    public static let __default: ElasticContainerModel.InferenceAccelerator = {
-        let defaultInstance = ElasticContainerModel.InferenceAccelerator(
-            deviceName: "value",
-            deviceType: "value")
-
-        return defaultInstance
-    }()
-}
-
-public extension InferenceAcceleratorOverride {
-    /**
-     Default instance of the InferenceAcceleratorOverride structure.
-     */
-    public static let __default: ElasticContainerModel.InferenceAcceleratorOverride = {
-        let defaultInstance = ElasticContainerModel.InferenceAcceleratorOverride(
-            deviceName: nil,
-            deviceType: nil)
 
         return defaultInstance
     }()
@@ -1033,9 +974,7 @@ public extension LinuxParameters {
             capabilities: nil,
             devices: nil,
             initProcessEnabled: nil,
-            maxSwap: nil,
             sharedMemorySize: nil,
-            swappiness: nil,
             tmpfs: nil)
 
         return defaultInstance
@@ -1613,7 +1552,6 @@ public extension RegisterTaskDefinitionRequest {
             cpu: nil,
             executionRoleArn: nil,
             family: "value",
-            inferenceAccelerators: nil,
             ipcMode: nil,
             memory: nil,
             networkMode: nil,
@@ -1935,31 +1873,6 @@ public extension StopTaskResponse {
     }()
 }
 
-public extension SubmitAttachmentStateChangesRequest {
-    /**
-     Default instance of the SubmitAttachmentStateChangesRequest structure.
-     */
-    public static let __default: ElasticContainerModel.SubmitAttachmentStateChangesRequest = {
-        let defaultInstance = ElasticContainerModel.SubmitAttachmentStateChangesRequest(
-            attachments: [],
-            cluster: nil)
-
-        return defaultInstance
-    }()
-}
-
-public extension SubmitAttachmentStateChangesResponse {
-    /**
-     Default instance of the SubmitAttachmentStateChangesResponse structure.
-     */
-    public static let __default: ElasticContainerModel.SubmitAttachmentStateChangesResponse = {
-        let defaultInstance = ElasticContainerModel.SubmitAttachmentStateChangesResponse(
-            acknowledgment: nil)
-
-        return defaultInstance
-    }()
-}
-
 public extension SubmitContainerStateChangeRequest {
     /**
      Default instance of the SubmitContainerStateChangeRequest structure.
@@ -1971,7 +1884,6 @@ public extension SubmitContainerStateChangeRequest {
             exitCode: nil,
             networkBindings: nil,
             reason: nil,
-            runtimeId: nil,
             status: nil,
             task: nil)
 
@@ -2102,7 +2014,6 @@ public extension Task {
             executionStoppedAt: nil,
             group: nil,
             healthStatus: nil,
-            inferenceAccelerators: nil,
             lastStatus: nil,
             launchType: nil,
             memory: nil,
@@ -2175,7 +2086,6 @@ public extension TaskOverride {
         let defaultInstance = ElasticContainerModel.TaskOverride(
             containerOverrides: nil,
             executionRoleArn: nil,
-            inferenceAcceleratorOverrides: nil,
             taskRoleArn: nil)
 
         return defaultInstance
@@ -2283,31 +2193,6 @@ public extension UntagResourceResponse {
      */
     public static let __default: ElasticContainerModel.UntagResourceResponse = {
         let defaultInstance = ElasticContainerModel.UntagResourceResponse()
-
-        return defaultInstance
-    }()
-}
-
-public extension UpdateClusterSettingsRequest {
-    /**
-     Default instance of the UpdateClusterSettingsRequest structure.
-     */
-    public static let __default: ElasticContainerModel.UpdateClusterSettingsRequest = {
-        let defaultInstance = ElasticContainerModel.UpdateClusterSettingsRequest(
-            cluster: "value",
-            settings: [])
-
-        return defaultInstance
-    }()
-}
-
-public extension UpdateClusterSettingsResponse {
-    /**
-     Default instance of the UpdateClusterSettingsResponse structure.
-     */
-    public static let __default: ElasticContainerModel.UpdateClusterSettingsResponse = {
-        let defaultInstance = ElasticContainerModel.UpdateClusterSettingsResponse(
-            cluster: nil)
 
         return defaultInstance
     }()

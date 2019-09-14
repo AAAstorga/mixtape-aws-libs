@@ -758,7 +758,6 @@ public extension DomainInfo {
      */
     public static let __default: SimpleWorkflowModel.DomainInfo = {
         let defaultInstance = SimpleWorkflowModel.DomainInfo(
-            arn: nil,
             description: nil,
             name: "0",
             status: .__default)
@@ -1098,30 +1097,6 @@ public extension ListOpenWorkflowExecutionsInput {
     }()
 }
 
-public extension ListTagsForResourceInput {
-    /**
-     Default instance of the ListTagsForResourceInput structure.
-     */
-    public static let __default: SimpleWorkflowModel.ListTagsForResourceInput = {
-        let defaultInstance = SimpleWorkflowModel.ListTagsForResourceInput(
-            resourceArn: "0")
-
-        return defaultInstance
-    }()
-}
-
-public extension ListTagsForResourceOutput {
-    /**
-     Default instance of the ListTagsForResourceOutput structure.
-     */
-    public static let __default: SimpleWorkflowModel.ListTagsForResourceOutput = {
-        let defaultInstance = SimpleWorkflowModel.ListTagsForResourceOutput(
-            tags: nil)
-
-        return defaultInstance
-    }()
-}
-
 public extension ListWorkflowTypesInput {
     /**
      Default instance of the ListWorkflowTypesInput structure.
@@ -1278,7 +1253,6 @@ public extension RegisterDomainInput {
         let defaultInstance = SimpleWorkflowModel.RegisterDomainInput(
             description: nil,
             name: "0",
-            tags: nil,
             workflowExecutionRetentionPeriodInDays: "0")
 
         return defaultInstance
@@ -1387,19 +1361,6 @@ public extension RequestCancelWorkflowExecutionInput {
             domain: "0",
             runId: nil,
             workflowId: "0")
-
-        return defaultInstance
-    }()
-}
-
-public extension ResourceTag {
-    /**
-     Default instance of the ResourceTag structure.
-     */
-    public static let __default: SimpleWorkflowModel.ResourceTag = {
-        let defaultInstance = SimpleWorkflowModel.ResourceTag(
-            key: "0",
-            value: nil)
 
         return defaultInstance
     }()
@@ -1742,19 +1703,6 @@ public extension TagFilter {
     }()
 }
 
-public extension TagResourceInput {
-    /**
-     Default instance of the TagResourceInput structure.
-     */
-    public static let __default: SimpleWorkflowModel.TagResourceInput = {
-        let defaultInstance = SimpleWorkflowModel.TagResourceInput(
-            resourceArn: "0",
-            tags: [])
-
-        return defaultInstance
-    }()
-}
-
 public extension TaskList {
     /**
      Default instance of the TaskList structure.
@@ -1826,18 +1774,6 @@ public extension TimerStartedEventAttributes {
     }()
 }
 
-public extension TooManyTagsFault {
-    /**
-     Default instance of the TooManyTagsFault structure.
-     */
-    public static let __default: SimpleWorkflowModel.TooManyTagsFault = {
-        let defaultInstance = SimpleWorkflowModel.TooManyTagsFault(
-            message: nil)
-
-        return defaultInstance
-    }()
-}
-
 public extension TypeAlreadyExistsFault {
     /**
      Default instance of the TypeAlreadyExistsFault structure.
@@ -1862,44 +1798,6 @@ public extension TypeDeprecatedFault {
     }()
 }
 
-public extension UndeprecateActivityTypeInput {
-    /**
-     Default instance of the UndeprecateActivityTypeInput structure.
-     */
-    public static let __default: SimpleWorkflowModel.UndeprecateActivityTypeInput = {
-        let defaultInstance = SimpleWorkflowModel.UndeprecateActivityTypeInput(
-            activityType: ActivityType.__default,
-            domain: "0")
-
-        return defaultInstance
-    }()
-}
-
-public extension UndeprecateDomainInput {
-    /**
-     Default instance of the UndeprecateDomainInput structure.
-     */
-    public static let __default: SimpleWorkflowModel.UndeprecateDomainInput = {
-        let defaultInstance = SimpleWorkflowModel.UndeprecateDomainInput(
-            name: "0")
-
-        return defaultInstance
-    }()
-}
-
-public extension UndeprecateWorkflowTypeInput {
-    /**
-     Default instance of the UndeprecateWorkflowTypeInput structure.
-     */
-    public static let __default: SimpleWorkflowModel.UndeprecateWorkflowTypeInput = {
-        let defaultInstance = SimpleWorkflowModel.UndeprecateWorkflowTypeInput(
-            domain: "0",
-            workflowType: WorkflowType.__default)
-
-        return defaultInstance
-    }()
-}
-
 public extension UnknownResourceFault {
     /**
      Default instance of the UnknownResourceFault structure.
@@ -1907,19 +1805,6 @@ public extension UnknownResourceFault {
     public static let __default: SimpleWorkflowModel.UnknownResourceFault = {
         let defaultInstance = SimpleWorkflowModel.UnknownResourceFault(
             message: nil)
-
-        return defaultInstance
-    }()
-}
-
-public extension UntagResourceInput {
-    /**
-     Default instance of the UntagResourceInput structure.
-     */
-    public static let __default: SimpleWorkflowModel.UntagResourceInput = {
-        let defaultInstance = SimpleWorkflowModel.UntagResourceInput(
-            resourceArn: "0",
-            tagKeys: [])
 
         return defaultInstance
     }()

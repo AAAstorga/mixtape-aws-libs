@@ -558,11 +558,6 @@ public extension HistoryEvent {
             lambdaFunctionStartFailedEventDetails: nil,
             lambdaFunctionSucceededEventDetails: nil,
             lambdaFunctionTimedOutEventDetails: nil,
-            mapIterationAbortedEventDetails: nil,
-            mapIterationFailedEventDetails: nil,
-            mapIterationStartedEventDetails: nil,
-            mapIterationSucceededEventDetails: nil,
-            mapStateStartedEventDetails: nil,
             previousEventId: nil,
             stateEnteredEventDetails: nil,
             stateExitedEventDetails: nil,
@@ -830,31 +825,6 @@ public extension ListTagsForResourceOutput {
     public static let __default: StepFunctionsModel.ListTagsForResourceOutput = {
         let defaultInstance = StepFunctionsModel.ListTagsForResourceOutput(
             tags: nil)
-
-        return defaultInstance
-    }()
-}
-
-public extension MapIterationEventDetails {
-    /**
-     Default instance of the MapIterationEventDetails structure.
-     */
-    public static let __default: StepFunctionsModel.MapIterationEventDetails = {
-        let defaultInstance = StepFunctionsModel.MapIterationEventDetails(
-            index: nil,
-            name: nil)
-
-        return defaultInstance
-    }()
-}
-
-public extension MapStateStartedEventDetails {
-    /**
-     Default instance of the MapStateStartedEventDetails structure.
-     */
-    public static let __default: StepFunctionsModel.MapStateStartedEventDetails = {
-        let defaultInstance = StepFunctionsModel.MapStateStartedEventDetails(
-            length: nil)
 
         return defaultInstance
     }()

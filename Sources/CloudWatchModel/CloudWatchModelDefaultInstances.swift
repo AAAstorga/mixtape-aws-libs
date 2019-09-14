@@ -37,35 +37,6 @@ public extension AlarmHistoryItem {
     }()
 }
 
-public extension AnomalyDetector {
-    /**
-     Default instance of the AnomalyDetector structure.
-     */
-    public static let __default: CloudWatchModel.AnomalyDetector = {
-        let defaultInstance = CloudWatchModel.AnomalyDetector(
-            configuration: nil,
-            dimensions: nil,
-            metricName: nil,
-            namespace: nil,
-            stat: nil)
-
-        return defaultInstance
-    }()
-}
-
-public extension AnomalyDetectorConfiguration {
-    /**
-     Default instance of the AnomalyDetectorConfiguration structure.
-     */
-    public static let __default: CloudWatchModel.AnomalyDetectorConfiguration = {
-        let defaultInstance = CloudWatchModel.AnomalyDetectorConfiguration(
-            excludedTimeRanges: nil,
-            metricTimezone: nil)
-
-        return defaultInstance
-    }()
-}
-
 public extension ConcurrentModificationException {
     /**
      Default instance of the ConcurrentModificationException structure.
@@ -156,44 +127,6 @@ public extension DeleteAlarmsInput {
     public static let __default: CloudWatchModel.DeleteAlarmsInput = {
         let defaultInstance = CloudWatchModel.DeleteAlarmsInput(
             alarmNames: [])
-
-        return defaultInstance
-    }()
-}
-
-public extension DeleteAnomalyDetectorInput {
-    /**
-     Default instance of the DeleteAnomalyDetectorInput structure.
-     */
-    public static let __default: CloudWatchModel.DeleteAnomalyDetectorInput = {
-        let defaultInstance = CloudWatchModel.DeleteAnomalyDetectorInput(
-            dimensions: nil,
-            metricName: "0",
-            namespace: "0",
-            stat: "value")
-
-        return defaultInstance
-    }()
-}
-
-public extension DeleteAnomalyDetectorOutput {
-    /**
-     Default instance of the DeleteAnomalyDetectorOutput structure.
-     */
-    public static let __default: CloudWatchModel.DeleteAnomalyDetectorOutput = {
-        let defaultInstance = CloudWatchModel.DeleteAnomalyDetectorOutput()
-
-        return defaultInstance
-    }()
-}
-
-public extension DeleteAnomalyDetectorOutputForDeleteAnomalyDetector {
-    /**
-     Default instance of the DeleteAnomalyDetectorOutputForDeleteAnomalyDetector structure.
-     */
-    public static let __default: CloudWatchModel.DeleteAnomalyDetectorOutputForDeleteAnomalyDetector = {
-        let defaultInstance = CloudWatchModel.DeleteAnomalyDetectorOutputForDeleteAnomalyDetector(
-            deleteAnomalyDetectorResult: DeleteAnomalyDetectorOutput.__default)
 
         return defaultInstance
     }()
@@ -355,47 +288,6 @@ public extension DescribeAlarmsOutputForDescribeAlarms {
     public static let __default: CloudWatchModel.DescribeAlarmsOutputForDescribeAlarms = {
         let defaultInstance = CloudWatchModel.DescribeAlarmsOutputForDescribeAlarms(
             describeAlarmsResult: DescribeAlarmsOutput.__default)
-
-        return defaultInstance
-    }()
-}
-
-public extension DescribeAnomalyDetectorsInput {
-    /**
-     Default instance of the DescribeAnomalyDetectorsInput structure.
-     */
-    public static let __default: CloudWatchModel.DescribeAnomalyDetectorsInput = {
-        let defaultInstance = CloudWatchModel.DescribeAnomalyDetectorsInput(
-            dimensions: nil,
-            maxResults: nil,
-            metricName: nil,
-            namespace: nil,
-            nextToken: nil)
-
-        return defaultInstance
-    }()
-}
-
-public extension DescribeAnomalyDetectorsOutput {
-    /**
-     Default instance of the DescribeAnomalyDetectorsOutput structure.
-     */
-    public static let __default: CloudWatchModel.DescribeAnomalyDetectorsOutput = {
-        let defaultInstance = CloudWatchModel.DescribeAnomalyDetectorsOutput(
-            anomalyDetectors: nil,
-            nextToken: nil)
-
-        return defaultInstance
-    }()
-}
-
-public extension DescribeAnomalyDetectorsOutputForDescribeAnomalyDetectors {
-    /**
-     Default instance of the DescribeAnomalyDetectorsOutputForDescribeAnomalyDetectors structure.
-     */
-    public static let __default: CloudWatchModel.DescribeAnomalyDetectorsOutputForDescribeAnomalyDetectors = {
-        let defaultInstance = CloudWatchModel.DescribeAnomalyDetectorsOutputForDescribeAnomalyDetectors(
-            describeAnomalyDetectorsResult: DescribeAnomalyDetectorsOutput.__default)
 
         return defaultInstance
     }()
@@ -674,17 +566,6 @@ public extension InvalidParameterValueException {
     }()
 }
 
-public extension LimitExceededException {
-    /**
-     Default instance of the LimitExceededException structure.
-     */
-    public static let __default: CloudWatchModel.LimitExceededException = {
-        let defaultInstance = CloudWatchModel.LimitExceededException()
-
-        return defaultInstance
-    }()
-}
-
 public extension LimitExceededFault {
     /**
      Default instance of the LimitExceededFault structure.
@@ -868,7 +749,6 @@ public extension MetricAlarm {
             stateValue: nil,
             statistic: nil,
             threshold: nil,
-            thresholdMetricId: nil,
             treatMissingData: nil,
             unit: nil)
 
@@ -956,45 +836,6 @@ public extension MissingRequiredParameterException {
     }()
 }
 
-public extension PutAnomalyDetectorInput {
-    /**
-     Default instance of the PutAnomalyDetectorInput structure.
-     */
-    public static let __default: CloudWatchModel.PutAnomalyDetectorInput = {
-        let defaultInstance = CloudWatchModel.PutAnomalyDetectorInput(
-            configuration: nil,
-            dimensions: nil,
-            metricName: "0",
-            namespace: "0",
-            stat: "value")
-
-        return defaultInstance
-    }()
-}
-
-public extension PutAnomalyDetectorOutput {
-    /**
-     Default instance of the PutAnomalyDetectorOutput structure.
-     */
-    public static let __default: CloudWatchModel.PutAnomalyDetectorOutput = {
-        let defaultInstance = CloudWatchModel.PutAnomalyDetectorOutput()
-
-        return defaultInstance
-    }()
-}
-
-public extension PutAnomalyDetectorOutputForPutAnomalyDetector {
-    /**
-     Default instance of the PutAnomalyDetectorOutputForPutAnomalyDetector structure.
-     */
-    public static let __default: CloudWatchModel.PutAnomalyDetectorOutputForPutAnomalyDetector = {
-        let defaultInstance = CloudWatchModel.PutAnomalyDetectorOutputForPutAnomalyDetector(
-            putAnomalyDetectorResult: PutAnomalyDetectorOutput.__default)
-
-        return defaultInstance
-    }()
-}
-
 public extension PutDashboardInput {
     /**
      Default instance of the PutDashboardInput structure.
@@ -1056,8 +897,7 @@ public extension PutMetricAlarmInput {
             period: nil,
             statistic: nil,
             tags: nil,
-            threshold: nil,
-            thresholdMetricId: nil,
+            threshold: 0.0,
             treatMissingData: nil,
             unit: nil)
 
@@ -1073,19 +913,6 @@ public extension PutMetricDataInput {
         let defaultInstance = CloudWatchModel.PutMetricDataInput(
             metricData: [],
             namespace: "0")
-
-        return defaultInstance
-    }()
-}
-
-public extension Range {
-    /**
-     Default instance of the Range structure.
-     */
-    public static let __default: CloudWatchModel.Range = {
-        let defaultInstance = CloudWatchModel.Range(
-            endTime: "2013-02-18T17:00:00Z",
-            startTime: "2013-02-18T17:00:00Z")
 
         return defaultInstance
     }()

@@ -860,11 +860,6 @@ public struct HistoryEvent: Codable, Equatable {
     public var lambdaFunctionStartFailedEventDetails: LambdaFunctionStartFailedEventDetails?
     public var lambdaFunctionSucceededEventDetails: LambdaFunctionSucceededEventDetails?
     public var lambdaFunctionTimedOutEventDetails: LambdaFunctionTimedOutEventDetails?
-    public var mapIterationAbortedEventDetails: MapIterationEventDetails?
-    public var mapIterationFailedEventDetails: MapIterationEventDetails?
-    public var mapIterationStartedEventDetails: MapIterationEventDetails?
-    public var mapIterationSucceededEventDetails: MapIterationEventDetails?
-    public var mapStateStartedEventDetails: MapStateStartedEventDetails?
     public var previousEventId: EventId?
     public var stateEnteredEventDetails: StateEnteredEventDetails?
     public var stateExitedEventDetails: StateExitedEventDetails?
@@ -897,11 +892,6 @@ public struct HistoryEvent: Codable, Equatable {
                 lambdaFunctionStartFailedEventDetails: LambdaFunctionStartFailedEventDetails? = nil,
                 lambdaFunctionSucceededEventDetails: LambdaFunctionSucceededEventDetails? = nil,
                 lambdaFunctionTimedOutEventDetails: LambdaFunctionTimedOutEventDetails? = nil,
-                mapIterationAbortedEventDetails: MapIterationEventDetails? = nil,
-                mapIterationFailedEventDetails: MapIterationEventDetails? = nil,
-                mapIterationStartedEventDetails: MapIterationEventDetails? = nil,
-                mapIterationSucceededEventDetails: MapIterationEventDetails? = nil,
-                mapStateStartedEventDetails: MapStateStartedEventDetails? = nil,
                 previousEventId: EventId? = nil,
                 stateEnteredEventDetails: StateEnteredEventDetails? = nil,
                 stateExitedEventDetails: StateExitedEventDetails? = nil,
@@ -933,11 +923,6 @@ public struct HistoryEvent: Codable, Equatable {
         self.lambdaFunctionStartFailedEventDetails = lambdaFunctionStartFailedEventDetails
         self.lambdaFunctionSucceededEventDetails = lambdaFunctionSucceededEventDetails
         self.lambdaFunctionTimedOutEventDetails = lambdaFunctionTimedOutEventDetails
-        self.mapIterationAbortedEventDetails = mapIterationAbortedEventDetails
-        self.mapIterationFailedEventDetails = mapIterationFailedEventDetails
-        self.mapIterationStartedEventDetails = mapIterationStartedEventDetails
-        self.mapIterationSucceededEventDetails = mapIterationSucceededEventDetails
-        self.mapStateStartedEventDetails = mapStateStartedEventDetails
         self.previousEventId = previousEventId
         self.stateEnteredEventDetails = stateEnteredEventDetails
         self.stateExitedEventDetails = stateExitedEventDetails
@@ -972,11 +957,6 @@ public struct HistoryEvent: Codable, Equatable {
         case lambdaFunctionStartFailedEventDetails
         case lambdaFunctionSucceededEventDetails
         case lambdaFunctionTimedOutEventDetails
-        case mapIterationAbortedEventDetails
-        case mapIterationFailedEventDetails
-        case mapIterationStartedEventDetails
-        case mapIterationSucceededEventDetails
-        case mapStateStartedEventDetails
         case previousEventId
         case stateEnteredEventDetails
         case stateExitedEventDetails
@@ -1010,11 +990,6 @@ public struct HistoryEvent: Codable, Equatable {
         try lambdaFunctionStartFailedEventDetails?.validate()
         try lambdaFunctionSucceededEventDetails?.validate()
         try lambdaFunctionTimedOutEventDetails?.validate()
-        try mapIterationAbortedEventDetails?.validate()
-        try mapIterationFailedEventDetails?.validate()
-        try mapIterationStartedEventDetails?.validate()
-        try mapIterationSucceededEventDetails?.validate()
-        try mapStateStartedEventDetails?.validate()
         try stateEnteredEventDetails?.validate()
         try stateExitedEventDetails?.validate()
         try taskFailedEventDetails?.validate()
@@ -1286,12 +1261,12 @@ public struct ListActivitiesOutput: Codable, Equatable {
 
 public struct ListExecutionsInput: Codable, Equatable {
     public var maxResults: PageSize?
-    public var nextToken: ListExecutionsPageToken?
+    public var nextToken: PageToken?
     public var stateMachineArn: Arn
     public var statusFilter: ExecutionStatus?
 
     public init(maxResults: PageSize? = nil,
-                nextToken: ListExecutionsPageToken? = nil,
+                nextToken: PageToken? = nil,
                 stateMachineArn: Arn,
                 statusFilter: ExecutionStatus? = nil) {
         self.maxResults = maxResults
@@ -1309,17 +1284,17 @@ public struct ListExecutionsInput: Codable, Equatable {
 
     public func validate() throws {
         try maxResults?.validateAsPageSize()
-        try nextToken?.validateAsListExecutionsPageToken()
+        try nextToken?.validateAsPageToken()
         try stateMachineArn.validateAsArn()
     }
 }
 
 public struct ListExecutionsOutput: Codable, Equatable {
     public var executions: ExecutionList
-    public var nextToken: ListExecutionsPageToken?
+    public var nextToken: PageToken?
 
     public init(executions: ExecutionList,
-                nextToken: ListExecutionsPageToken? = nil) {
+                nextToken: PageToken? = nil) {
         self.executions = executions
         self.nextToken = nextToken
     }
@@ -1330,7 +1305,7 @@ public struct ListExecutionsOutput: Codable, Equatable {
     }
 
     public func validate() throws {
-        try nextToken?.validateAsListExecutionsPageToken()
+        try nextToken?.validateAsPageToken()
     }
 }
 
@@ -1403,43 +1378,6 @@ public struct ListTagsForResourceOutput: Codable, Equatable {
     }
 
     public func validate() throws {
-    }
-}
-
-public struct MapIterationEventDetails: Codable, Equatable {
-    public var index: UnsignedInteger?
-    public var name: Name?
-
-    public init(index: UnsignedInteger? = nil,
-                name: Name? = nil) {
-        self.index = index
-        self.name = name
-    }
-
-    enum CodingKeys: String, CodingKey {
-        case index
-        case name
-    }
-
-    public func validate() throws {
-        try index?.validateAsUnsignedInteger()
-        try name?.validateAsName()
-    }
-}
-
-public struct MapStateStartedEventDetails: Codable, Equatable {
-    public var length: UnsignedInteger?
-
-    public init(length: UnsignedInteger? = nil) {
-        self.length = length
-    }
-
-    enum CodingKeys: String, CodingKey {
-        case length
-    }
-
-    public func validate() throws {
-        try length?.validateAsUnsignedInteger()
     }
 }
 

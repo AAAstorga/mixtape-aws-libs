@@ -29,7 +29,6 @@ public enum SecurityTokenModelOperations: String {
     case assumeRoleWithSAML = "AssumeRoleWithSAML"
     case assumeRoleWithWebIdentity = "AssumeRoleWithWebIdentity"
     case decodeAuthorizationMessage = "DecodeAuthorizationMessage"
-    case getAccessKeyInfo = "GetAccessKeyInfo"
     case getCallerIdentity = "GetCallerIdentity"
     case getFederationToken = "GetFederationToken"
     case getSessionToken = "GetSessionToken"
@@ -43,8 +42,6 @@ public enum SecurityTokenModelOperations: String {
         case .assumeRoleWithWebIdentity:
             return "/"
         case .decodeAuthorizationMessage:
-            return "/"
-        case .getAccessKeyInfo:
             return "/"
         case .getCallerIdentity:
             return "/"

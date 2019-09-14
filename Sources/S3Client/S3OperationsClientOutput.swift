@@ -80,7 +80,6 @@ extension CopyObjectOutput: HTTPResponseOutputProtocol {
             requestCharged: headers.requestCharged,
             sSECustomerAlgorithm: headers.sSECustomerAlgorithm,
             sSECustomerKeyMD5: headers.sSECustomerKeyMD5,
-            sSEKMSEncryptionContext: headers.sSEKMSEncryptionContext,
             sSEKMSKeyId: headers.sSEKMSKeyId,
             serverSideEncryption: headers.serverSideEncryption,
             versionId: headers.versionId)
@@ -120,7 +119,6 @@ extension CreateMultipartUploadOutput: HTTPResponseOutputProtocol {
             requestCharged: headers.requestCharged,
             sSECustomerAlgorithm: headers.sSECustomerAlgorithm,
             sSECustomerKeyMD5: headers.sSECustomerKeyMD5,
-            sSEKMSEncryptionContext: headers.sSEKMSEncryptionContext,
             sSEKMSKeyId: headers.sSEKMSKeyId,
             serverSideEncryption: headers.serverSideEncryption,
             uploadId: body.uploadId)

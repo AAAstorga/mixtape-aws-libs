@@ -96,10 +96,6 @@ public enum ElasticComputeCloudModelOperations: String {
     case createSpotDatafeedSubscription = "CreateSpotDatafeedSubscription"
     case createSubnet = "CreateSubnet"
     case createTags = "CreateTags"
-    case createTrafficMirrorFilter = "CreateTrafficMirrorFilter"
-    case createTrafficMirrorFilterRule = "CreateTrafficMirrorFilterRule"
-    case createTrafficMirrorSession = "CreateTrafficMirrorSession"
-    case createTrafficMirrorTarget = "CreateTrafficMirrorTarget"
     case createTransitGateway = "CreateTransitGateway"
     case createTransitGatewayRoute = "CreateTransitGatewayRoute"
     case createTransitGatewayRouteTable = "CreateTransitGatewayRouteTable"
@@ -138,10 +134,6 @@ public enum ElasticComputeCloudModelOperations: String {
     case deleteSpotDatafeedSubscription = "DeleteSpotDatafeedSubscription"
     case deleteSubnet = "DeleteSubnet"
     case deleteTags = "DeleteTags"
-    case deleteTrafficMirrorFilter = "DeleteTrafficMirrorFilter"
-    case deleteTrafficMirrorFilterRule = "DeleteTrafficMirrorFilterRule"
-    case deleteTrafficMirrorSession = "DeleteTrafficMirrorSession"
-    case deleteTrafficMirrorTarget = "DeleteTrafficMirrorTarget"
     case deleteTransitGateway = "DeleteTransitGateway"
     case deleteTransitGatewayRoute = "DeleteTransitGatewayRoute"
     case deleteTransitGatewayRouteTable = "DeleteTransitGatewayRouteTable"
@@ -175,7 +167,6 @@ public enum ElasticComputeCloudModelOperations: String {
     case describeDhcpOptions = "DescribeDhcpOptions"
     case describeEgressOnlyInternetGateways = "DescribeEgressOnlyInternetGateways"
     case describeElasticGpus = "DescribeElasticGpus"
-    case describeExportImageTasks = "DescribeExportImageTasks"
     case describeExportTasks = "DescribeExportTasks"
     case describeFleetHistory = "DescribeFleetHistory"
     case describeFleetInstances = "DescribeFleetInstances"
@@ -232,9 +223,6 @@ public enum ElasticComputeCloudModelOperations: String {
     case describeStaleSecurityGroups = "DescribeStaleSecurityGroups"
     case describeSubnets = "DescribeSubnets"
     case describeTags = "DescribeTags"
-    case describeTrafficMirrorFilters = "DescribeTrafficMirrorFilters"
-    case describeTrafficMirrorSessions = "DescribeTrafficMirrorSessions"
-    case describeTrafficMirrorTargets = "DescribeTrafficMirrorTargets"
     case describeTransitGatewayAttachments = "DescribeTransitGatewayAttachments"
     case describeTransitGatewayRouteTables = "DescribeTransitGatewayRouteTables"
     case describeTransitGatewayVpcAttachments = "DescribeTransitGatewayVpcAttachments"
@@ -281,9 +269,7 @@ public enum ElasticComputeCloudModelOperations: String {
     case enableVpcClassicLinkDnsSupport = "EnableVpcClassicLinkDnsSupport"
     case exportClientVpnClientCertificateRevocationList = "ExportClientVpnClientCertificateRevocationList"
     case exportClientVpnClientConfiguration = "ExportClientVpnClientConfiguration"
-    case exportImage = "ExportImage"
     case exportTransitGatewayRoutes = "ExportTransitGatewayRoutes"
-    case getCapacityReservationUsage = "GetCapacityReservationUsage"
     case getConsoleOutput = "GetConsoleOutput"
     case getConsoleScreenshot = "GetConsoleScreenshot"
     case getEbsDefaultKmsKeyId = "GetEbsDefaultKmsKeyId"
@@ -321,9 +307,6 @@ public enum ElasticComputeCloudModelOperations: String {
     case modifySnapshotAttribute = "ModifySnapshotAttribute"
     case modifySpotFleetRequest = "ModifySpotFleetRequest"
     case modifySubnetAttribute = "ModifySubnetAttribute"
-    case modifyTrafficMirrorFilterNetworkServices = "ModifyTrafficMirrorFilterNetworkServices"
-    case modifyTrafficMirrorFilterRule = "ModifyTrafficMirrorFilterRule"
-    case modifyTrafficMirrorSession = "ModifyTrafficMirrorSession"
     case modifyTransitGatewayVpcAttachment = "ModifyTransitGatewayVpcAttachment"
     case modifyVolume = "ModifyVolume"
     case modifyVolumeAttribute = "ModifyVolumeAttribute"
@@ -335,8 +318,6 @@ public enum ElasticComputeCloudModelOperations: String {
     case modifyVpcPeeringConnectionOptions = "ModifyVpcPeeringConnectionOptions"
     case modifyVpcTenancy = "ModifyVpcTenancy"
     case modifyVpnConnection = "ModifyVpnConnection"
-    case modifyVpnTunnelCertificate = "ModifyVpnTunnelCertificate"
-    case modifyVpnTunnelOptions = "ModifyVpnTunnelOptions"
     case monitorInstances = "MonitorInstances"
     case moveAddressToVpc = "MoveAddressToVpc"
     case provisionByoipCidr = "ProvisionByoipCidr"
@@ -372,7 +353,6 @@ public enum ElasticComputeCloudModelOperations: String {
     case runInstances = "RunInstances"
     case runScheduledInstances = "RunScheduledInstances"
     case searchTransitGatewayRoutes = "SearchTransitGatewayRoutes"
-    case sendDiagnosticInterrupt = "SendDiagnosticInterrupt"
     case startInstances = "StartInstances"
     case stopInstances = "StopInstances"
     case terminateClientVpnConnections = "TerminateClientVpnConnections"
@@ -528,14 +508,6 @@ public enum ElasticComputeCloudModelOperations: String {
             return "/"
         case .createTags:
             return "/"
-        case .createTrafficMirrorFilter:
-            return "/"
-        case .createTrafficMirrorFilterRule:
-            return "/"
-        case .createTrafficMirrorSession:
-            return "/"
-        case .createTrafficMirrorTarget:
-            return "/"
         case .createTransitGateway:
             return "/"
         case .createTransitGatewayRoute:
@@ -612,14 +584,6 @@ public enum ElasticComputeCloudModelOperations: String {
             return "/"
         case .deleteTags:
             return "/"
-        case .deleteTrafficMirrorFilter:
-            return "/"
-        case .deleteTrafficMirrorFilterRule:
-            return "/"
-        case .deleteTrafficMirrorSession:
-            return "/"
-        case .deleteTrafficMirrorTarget:
-            return "/"
         case .deleteTransitGateway:
             return "/"
         case .deleteTransitGatewayRoute:
@@ -685,8 +649,6 @@ public enum ElasticComputeCloudModelOperations: String {
         case .describeEgressOnlyInternetGateways:
             return "/"
         case .describeElasticGpus:
-            return "/"
-        case .describeExportImageTasks:
             return "/"
         case .describeExportTasks:
             return "/"
@@ -800,12 +762,6 @@ public enum ElasticComputeCloudModelOperations: String {
             return "/"
         case .describeTags:
             return "/"
-        case .describeTrafficMirrorFilters:
-            return "/"
-        case .describeTrafficMirrorSessions:
-            return "/"
-        case .describeTrafficMirrorTargets:
-            return "/"
         case .describeTransitGatewayAttachments:
             return "/"
         case .describeTransitGatewayRouteTables:
@@ -898,11 +854,7 @@ public enum ElasticComputeCloudModelOperations: String {
             return "/"
         case .exportClientVpnClientConfiguration:
             return "/"
-        case .exportImage:
-            return "/"
         case .exportTransitGatewayRoutes:
-            return "/"
-        case .getCapacityReservationUsage:
             return "/"
         case .getConsoleOutput:
             return "/"
@@ -978,12 +930,6 @@ public enum ElasticComputeCloudModelOperations: String {
             return "/"
         case .modifySubnetAttribute:
             return "/"
-        case .modifyTrafficMirrorFilterNetworkServices:
-            return "/"
-        case .modifyTrafficMirrorFilterRule:
-            return "/"
-        case .modifyTrafficMirrorSession:
-            return "/"
         case .modifyTransitGatewayVpcAttachment:
             return "/"
         case .modifyVolume:
@@ -1005,10 +951,6 @@ public enum ElasticComputeCloudModelOperations: String {
         case .modifyVpcTenancy:
             return "/"
         case .modifyVpnConnection:
-            return "/"
-        case .modifyVpnTunnelCertificate:
-            return "/"
-        case .modifyVpnTunnelOptions:
             return "/"
         case .monitorInstances:
             return "/"
@@ -1079,8 +1021,6 @@ public enum ElasticComputeCloudModelOperations: String {
         case .runScheduledInstances:
             return "/"
         case .searchTransitGatewayRoutes:
-            return "/"
-        case .sendDiagnosticInterrupt:
             return "/"
         case .startInstances:
             return "/"

@@ -350,20 +350,17 @@ public struct SendMessageOperationInputQuery: Codable, Equatable {
     public var messageBody: String
     public var messageDeduplicationId: String?
     public var messageGroupId: String?
-    public var messageSystemAttributes: MessageBodySystemAttributeMap?
 
     public init(delaySeconds: Integer? = nil,
                 messageAttributes: MessageBodyAttributeMap? = nil,
                 messageBody: String,
                 messageDeduplicationId: String? = nil,
-                messageGroupId: String? = nil,
-                messageSystemAttributes: MessageBodySystemAttributeMap? = nil) {
+                messageGroupId: String? = nil) {
         self.delaySeconds = delaySeconds
         self.messageAttributes = messageAttributes
         self.messageBody = messageBody
         self.messageDeduplicationId = messageDeduplicationId
         self.messageGroupId = messageGroupId
-        self.messageSystemAttributes = messageSystemAttributes
     }
 
     enum CodingKeys: String, CodingKey {
@@ -372,7 +369,6 @@ public struct SendMessageOperationInputQuery: Codable, Equatable {
         case messageBody = "MessageBody"
         case messageDeduplicationId = "MessageDeduplicationId"
         case messageGroupId = "MessageGroupId"
-        case messageSystemAttributes = "MessageSystemAttribute"
     }
 
     public func validate() throws {
@@ -386,8 +382,7 @@ public extension SendMessageRequest {
             messageAttributes: messageAttributes,
             messageBody: messageBody,
             messageDeduplicationId: messageDeduplicationId,
-            messageGroupId: messageGroupId,
-            messageSystemAttributes: messageSystemAttributes)
+            messageGroupId: messageGroupId)
     }
 }
 

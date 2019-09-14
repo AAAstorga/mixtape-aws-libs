@@ -108,24 +108,6 @@ public enum ClusterField: String, Codable, CustomStringConvertible {
 public typealias ClusterFieldList = [ClusterField]
 
 /**
- Enumeration restricting the values of the ClusterSettingName field.
- */
-public enum ClusterSettingName: String, Codable, CustomStringConvertible {
-    case containerinsights = "containerInsights"
-
-    public var description: String {
-        return rawValue
-    }
-    
-    public static let __default: ClusterSettingName = .containerinsights
-}
-
-/**
- Type definition for the ClusterSettings field.
- */
-public typealias ClusterSettings = [ClusterSetting]
-
-/**
  Type definition for the Clusters field.
  */
 public typealias Clusters = [Cluster]
@@ -212,10 +194,7 @@ public typealias ContainerInstanceFieldList = [ContainerInstanceField]
  */
 public enum ContainerInstanceStatus: String, Codable, CustomStringConvertible {
     case active = "ACTIVE"
-    case deregistering = "DEREGISTERING"
     case draining = "DRAINING"
-    case registering = "REGISTERING"
-    case registrationFailed = "REGISTRATION_FAILED"
 
     public var description: String {
         return rawValue
@@ -320,25 +299,6 @@ public typealias EnvironmentVariables = [KeyValuePair]
 public typealias Failures = [Failure]
 
 /**
- Type definition for the FirelensConfigurationOptionsMap field.
- */
-public typealias FirelensConfigurationOptionsMap = [String: String]
-
-/**
- Enumeration restricting the values of the FirelensConfigurationType field.
- */
-public enum FirelensConfigurationType: String, Codable, CustomStringConvertible {
-    case fluentbit
-    case fluentd
-
-    public var description: String {
-        return rawValue
-    }
-    
-    public static let __default: FirelensConfigurationType = .fluentbit
-}
-
-/**
  Type definition for the GpuIds field.
  */
 public typealias GpuIds = [String]
@@ -362,16 +322,6 @@ public enum HealthStatus: String, Codable, CustomStringConvertible {
  Type definition for the HostEntryList field.
  */
 public typealias HostEntryList = [HostEntry]
-
-/**
- Type definition for the InferenceAcceleratorOverrides field.
- */
-public typealias InferenceAcceleratorOverrides = [InferenceAcceleratorOverride]
-
-/**
- Type definition for the InferenceAccelerators field.
- */
-public typealias InferenceAccelerators = [InferenceAccelerator]
 
 /**
  Type definition for the Integer field.
@@ -421,7 +371,6 @@ public typealias LogConfigurationOptionsMap = [String: String]
  Enumeration restricting the values of the LogDriver field.
  */
 public enum LogDriver: String, Codable, CustomStringConvertible {
-    case awsfirelens
     case awslogs
     case fluentd
     case gelf
@@ -434,7 +383,7 @@ public enum LogDriver: String, Codable, CustomStringConvertible {
         return rawValue
     }
     
-    public static let __default: LogDriver = .awsfirelens
+    public static let __default: LogDriver = .awslogs
 }
 
 /**
@@ -596,7 +545,6 @@ public typealias ResourceRequirements = [ResourceRequirement]
  */
 public enum ResourceType: String, Codable, CustomStringConvertible {
     case gpu = "GPU"
-    case inferenceaccelerator = "InferenceAccelerator"
 
     public var description: String {
         return rawValue
@@ -693,8 +641,6 @@ public typealias Services = [Service]
  Enumeration restricting the values of the SettingName field.
  */
 public enum SettingName: String, Codable, CustomStringConvertible {
-    case awsvpctrunking = "awsvpcTrunking"
-    case containerinsights = "containerInsights"
     case containerinstancelongarnformat = "containerInstanceLongArnFormat"
     case servicelongarnformat = "serviceLongArnFormat"
     case tasklongarnformat = "taskLongArnFormat"
@@ -703,7 +649,7 @@ public enum SettingName: String, Codable, CustomStringConvertible {
         return rawValue
     }
     
-    public static let __default: SettingName = .awsvpctrunking
+    public static let __default: SettingName = .containerinstancelongarnformat
 }
 
 /**

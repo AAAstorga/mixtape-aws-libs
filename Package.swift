@@ -44,12 +44,6 @@ let package = Package(
             name: "ElasticContainerModel",
             targets: ["ElasticContainerModel"]),
         .library(
-            name: "IotClient",
-            targets: ["IotClient"]),
-        .library(
-            name: "IotModel",
-            targets: ["IotModel"]),
-        .library(
             name: "RDSClient",
             targets: ["RDSClient"]),
         .library(
@@ -137,12 +131,6 @@ let package = Package(
             name: "ElasticContainerModel",
             dependencies: ["LoggerAPI"]),
         .target(
-            name: "IotClient",
-            dependencies: ["IotModel", "SmokeAWSHttp"]),
-        .target(
-            name: "IotModel",
-            dependencies: ["LoggerAPI"]),
-        .target(
             name: "RDSClient",
             dependencies: ["RDSModel", "SmokeAWSHttp"]),
         .target(
@@ -213,5 +201,8 @@ let package = Package(
         .testTarget(
             name: "ElasticComputeCloudClientTests",
             dependencies: ["ElasticComputeCloudClient"]),
+        .testTarget(
+            name: "RDSClientTests",
+            dependencies: ["RDSClient"]),
     ]
 )

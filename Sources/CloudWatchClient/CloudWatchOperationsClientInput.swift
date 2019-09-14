@@ -29,11 +29,6 @@ import CloudWatchModel
 public typealias DeleteAlarmsOperationHTTPRequestInput = QueryHTTPRequestInput
 
 /**
- Type to handle the input to the DeleteAnomalyDetector operation in a HTTP client.
- */
-public typealias DeleteAnomalyDetectorOperationHTTPRequestInput = QueryHTTPRequestInput
-
-/**
  Type to handle the input to the DeleteDashboards operation in a HTTP client.
  */
 public typealias DeleteDashboardsOperationHTTPRequestInput = QueryHTTPRequestInput
@@ -52,11 +47,6 @@ public typealias DescribeAlarmsOperationHTTPRequestInput = QueryHTTPRequestInput
  Type to handle the input to the DescribeAlarmsForMetric operation in a HTTP client.
  */
 public typealias DescribeAlarmsForMetricOperationHTTPRequestInput = QueryHTTPRequestInput
-
-/**
- Type to handle the input to the DescribeAnomalyDetectors operation in a HTTP client.
- */
-public typealias DescribeAnomalyDetectorsOperationHTTPRequestInput = QueryHTTPRequestInput
 
 /**
  Type to handle the input to the DisableAlarmActions operation in a HTTP client.
@@ -102,11 +92,6 @@ public typealias ListMetricsOperationHTTPRequestInput = QueryHTTPRequestInput
  Type to handle the input to the ListTagsForResource operation in a HTTP client.
  */
 public typealias ListTagsForResourceOperationHTTPRequestInput = QueryHTTPRequestInput
-
-/**
- Type to handle the input to the PutAnomalyDetector operation in a HTTP client.
- */
-public typealias PutAnomalyDetectorOperationHTTPRequestInput = QueryHTTPRequestInput
 
 /**
  Type to handle the input to the PutDashboard operation in a HTTP client.

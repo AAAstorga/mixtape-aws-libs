@@ -158,8 +158,7 @@ public extension CreateQueueRequest {
     public static let __default: SimpleQueueModel.CreateQueueRequest = {
         let defaultInstance = SimpleQueueModel.CreateQueueRequest(
             attributes: nil,
-            queueName: "value",
-            tags: nil)
+            queueName: "value")
 
         return defaultInstance
     }()
@@ -559,22 +558,6 @@ public extension MessageNotInflight {
     }()
 }
 
-public extension MessageSystemAttributeValue {
-    /**
-     Default instance of the MessageSystemAttributeValue structure.
-     */
-    public static let __default: SimpleQueueModel.MessageSystemAttributeValue = {
-        let defaultInstance = SimpleQueueModel.MessageSystemAttributeValue(
-            binaryListValues: nil,
-            binaryValue: nil,
-            dataType: "value",
-            stringListValues: nil,
-            stringValue: nil)
-
-        return defaultInstance
-    }()
-}
-
 public extension OverLimit {
     /**
      Default instance of the OverLimit structure.
@@ -732,8 +715,7 @@ public extension SendMessageBatchRequestEntry {
             messageAttributes: nil,
             messageBody: "value",
             messageDeduplicationId: nil,
-            messageGroupId: nil,
-            messageSystemAttributes: nil)
+            messageGroupId: nil)
 
         return defaultInstance
     }()
@@ -761,7 +743,6 @@ public extension SendMessageBatchResultEntry {
             id: "value",
             mD5OfMessageAttributes: nil,
             mD5OfMessageBody: "value",
-            mD5OfMessageSystemAttributes: nil,
             messageId: "value",
             sequenceNumber: nil)
 
@@ -792,7 +773,6 @@ public extension SendMessageRequest {
             messageBody: "value",
             messageDeduplicationId: nil,
             messageGroupId: nil,
-            messageSystemAttributes: nil,
             queueUrl: "value")
 
         return defaultInstance
@@ -807,7 +787,6 @@ public extension SendMessageResult {
         let defaultInstance = SimpleQueueModel.SendMessageResult(
             mD5OfMessageAttributes: nil,
             mD5OfMessageBody: nil,
-            mD5OfMessageSystemAttributes: nil,
             messageId: nil,
             sequenceNumber: nil)
 

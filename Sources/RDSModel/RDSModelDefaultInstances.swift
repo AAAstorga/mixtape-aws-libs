@@ -612,7 +612,6 @@ public extension CreateDBClusterMessage {
             databaseName: nil,
             deletionProtection: nil,
             enableCloudwatchLogsExports: nil,
-            enableHttpEndpoint: nil,
             enableIAMDatabaseAuthentication: nil,
             engine: "value",
             engineMode: nil,
@@ -769,7 +768,6 @@ public extension CreateDBInstanceMessage {
             licenseModel: nil,
             masterUserPassword: nil,
             masterUsername: nil,
-            maxAllocatedStorage: nil,
             monitoringInterval: nil,
             monitoringRoleArn: nil,
             multiAZ: nil,
@@ -805,7 +803,6 @@ public extension CreateDBInstanceReadReplicaMessage {
             copyTagsToSnapshot: nil,
             dBInstanceClass: nil,
             dBInstanceIdentifier: "value",
-            dBParameterGroupName: nil,
             dBSubnetGroupName: nil,
             deletionProtection: nil,
             enableCloudwatchLogsExports: nil,
@@ -1180,7 +1177,6 @@ public extension DBCluster {
             cloneGroupId: nil,
             clusterCreateTime: nil,
             copyTagsToSnapshot: nil,
-            crossAccountClone: nil,
             customEndpoints: nil,
             dBClusterArn: nil,
             dBClusterIdentifier: nil,
@@ -1869,7 +1865,6 @@ public extension DBInstance {
             licenseModel: nil,
             listenerEndpoint: nil,
             masterUsername: nil,
-            maxAllocatedStorage: nil,
             monitoringInterval: nil,
             monitoringRoleArn: nil,
             multiAZ: nil,
@@ -3058,7 +3053,6 @@ public extension DescribeDBClustersMessage {
         let defaultInstance = RDSModel.DescribeDBClustersMessage(
             dBClusterIdentifier: nil,
             filters: nil,
-            includeShared: nil,
             marker: nil,
             maxRecords: nil)
 
@@ -4333,7 +4327,6 @@ public extension ModifyDBClusterMessage {
      */
     public static let __default: RDSModel.ModifyDBClusterMessage = {
         let defaultInstance = RDSModel.ModifyDBClusterMessage(
-            allowMajorVersionUpgrade: nil,
             applyImmediately: nil,
             backtrackWindow: nil,
             backupRetentionPeriod: nil,
@@ -4341,7 +4334,6 @@ public extension ModifyDBClusterMessage {
             copyTagsToSnapshot: nil,
             dBClusterIdentifier: "value",
             dBClusterParameterGroupName: nil,
-            dBInstanceParameterGroupName: nil,
             deletionProtection: nil,
             enableHttpEndpoint: nil,
             enableIAMDatabaseAuthentication: nil,
@@ -4464,7 +4456,6 @@ public extension ModifyDBInstanceMessage {
             iops: nil,
             licenseModel: nil,
             masterUserPassword: nil,
-            maxAllocatedStorage: nil,
             monitoringInterval: nil,
             monitoringRoleArn: nil,
             multiAZ: nil,
@@ -5013,7 +5004,6 @@ public extension OrderableDBInstanceOption {
             supportsIAMDatabaseAuthentication: nil,
             supportsIops: nil,
             supportsPerformanceInsights: nil,
-            supportsStorageAutoscaling: nil,
             supportsStorageEncryption: nil,
             vpc: nil)
 
@@ -6631,8 +6621,7 @@ public extension ValidStorageOptions {
             iopsToStorageRatio: nil,
             provisionedIops: nil,
             storageSize: nil,
-            storageType: nil,
-            supportsStorageAutoscaling: nil)
+            storageType: nil)
 
         return defaultInstance
     }()

@@ -194,11 +194,6 @@ public typealias StartTaskOperationHTTPRequestInput = BodyHTTPRequestInput
 public typealias StopTaskOperationHTTPRequestInput = BodyHTTPRequestInput
 
 /**
- Type to handle the input to the SubmitAttachmentStateChanges operation in a HTTP client.
- */
-public typealias SubmitAttachmentStateChangesOperationHTTPRequestInput = BodyHTTPRequestInput
-
-/**
  Type to handle the input to the SubmitContainerStateChange operation in a HTTP client.
  */
 public typealias SubmitContainerStateChangeOperationHTTPRequestInput = BodyHTTPRequestInput
@@ -217,11 +212,6 @@ public typealias TagResourceOperationHTTPRequestInput = BodyHTTPRequestInput
  Type to handle the input to the UntagResource operation in a HTTP client.
  */
 public typealias UntagResourceOperationHTTPRequestInput = BodyHTTPRequestInput
-
-/**
- Type to handle the input to the UpdateClusterSettings operation in a HTTP client.
- */
-public typealias UpdateClusterSettingsOperationHTTPRequestInput = BodyHTTPRequestInput
 
 /**
  Type to handle the input to the UpdateContainerAgent operation in a HTTP client.

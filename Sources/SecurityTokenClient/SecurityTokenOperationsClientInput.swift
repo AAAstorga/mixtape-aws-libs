@@ -44,11 +44,6 @@ public typealias AssumeRoleWithWebIdentityOperationHTTPRequestInput = QueryHTTPR
 public typealias DecodeAuthorizationMessageOperationHTTPRequestInput = QueryHTTPRequestInput
 
 /**
- Type to handle the input to the GetAccessKeyInfo operation in a HTTP client.
- */
-public typealias GetAccessKeyInfoOperationHTTPRequestInput = QueryHTTPRequestInput
-
-/**
  Type to handle the input to the GetCallerIdentity operation in a HTTP client.
  */
 public typealias GetCallerIdentityOperationHTTPRequestInput = QueryHTTPRequestInput

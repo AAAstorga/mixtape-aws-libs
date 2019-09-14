@@ -466,19 +466,6 @@ extension StopTaskResponse: HTTPResponseOutputProtocol {
 }
 
 /**
- Type to handle the output from the SubmitAttachmentStateChanges operation in a HTTP client.
- */
-extension SubmitAttachmentStateChangesResponse: HTTPResponseOutputProtocol {
-    public typealias BodyType = SubmitAttachmentStateChangesResponse
-    public typealias HeadersType = SubmitAttachmentStateChangesResponse
-
-    public static func compose(bodyDecodableProvider: () throws -> BodyType,
-                               headersDecodableProvider: () throws -> HeadersType) throws -> SubmitAttachmentStateChangesResponse {
-        return try bodyDecodableProvider()
-    }
-}
-
-/**
  Type to handle the output from the SubmitContainerStateChange operation in a HTTP client.
  */
 extension SubmitContainerStateChangeResponse: HTTPResponseOutputProtocol {
@@ -526,19 +513,6 @@ extension UntagResourceResponse: HTTPResponseOutputProtocol {
 
     public static func compose(bodyDecodableProvider: () throws -> BodyType,
                                headersDecodableProvider: () throws -> HeadersType) throws -> UntagResourceResponse {
-        return try bodyDecodableProvider()
-    }
-}
-
-/**
- Type to handle the output from the UpdateClusterSettings operation in a HTTP client.
- */
-extension UpdateClusterSettingsResponse: HTTPResponseOutputProtocol {
-    public typealias BodyType = UpdateClusterSettingsResponse
-    public typealias HeadersType = UpdateClusterSettingsResponse
-
-    public static func compose(bodyDecodableProvider: () throws -> BodyType,
-                               headersDecodableProvider: () throws -> HeadersType) throws -> UpdateClusterSettingsResponse {
         return try bodyDecodableProvider()
     }
 }
